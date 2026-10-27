@@ -10,7 +10,7 @@ internal sealed record UpdateOffer(string Version, string DownloadUrl);
 
 internal static class AppUpdate
 {
-    internal const string Repository = "";
+    internal const string Repository = "Fizzlestat/redm-chat-parser";
 
     private static readonly HttpClient Http = CreateClient();
 

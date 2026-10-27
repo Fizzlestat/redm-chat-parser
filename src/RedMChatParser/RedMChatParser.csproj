@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>RedMChatParser</RootNamespace>
+    <AssemblyName>RedMChatParser</AssemblyName>
+    <Version>1.0.1</Version>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+  </PropertyGroup>
+  <ItemGroup>
+    <Using Include="System.ComponentModel" />
+    <Using Include="System.IO" />
+    <Using Include="System.Net.Http" />
+    <Using Include="System.Windows" />
+    <Using Include="System.Windows.Controls" />
+    <Using Include="System.Windows.Input" />
+    <Using Include="System.Windows.Media" />
+    <Using Include="System.Windows.Media.Animation" />
+    <Using Include="System.Windows.Media.Imaging" />
+    <Using Include="System.Windows.Threading" />
+  </ItemGroup>
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>RedMChatParser.Tests</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="locales\*.json" />
+    <Content Include="locales\*.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NAudio.Core" Version="2.2.1" />
+    <PackageReference Include="NAudio.Wasapi" Version="2.2.1" />
+    <PackageReference Include="NAudio.WinMM" Version="2.2.1" />
+    <PackageReference Include="NAudio.Vorbis" Version="1.5.0" />
+  </ItemGroup>
+</Project>
